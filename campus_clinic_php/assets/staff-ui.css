@@ -1,0 +1,56 @@
+/* Staff workspace: consistent controls without changing routes or workflows. */
+body.staff-app{--bg:#f3f5f9;--text:#192b43;--muted:#58687b;--border:#dce3ec;--danger-bg:#fff0ef;--danger-text:#a12622;--success-bg:#eaf7ef;--success-text:#22613b;background:var(--bg)}
+.staff-app .sidebar{background:#102d55;border-right:0;box-shadow:3px 0 16px #102d5510}
+.staff-app .brand{border-bottom:1px solid #ffffff24;border-radius:0;padding-bottom:22px}
+.staff-app .sidebar nav{gap:5px}.staff-app .sidebar nav>a{border-radius:9px;padding:12px 14px;font-size:14px;color:#e3ebf7;font-weight:500}
+.staff-app .sidebar nav>a:hover{background:#ffffff12}.staff-app .sidebar nav>a.active{background:#ffffff;color:#123b72;box-shadow:0 2px 8px #00000010;font-weight:700;border-left:0}
+.staff-app .nav-icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;font-size:18px;flex-shrink:0}
+.staff-app .content{max-width:1800px}.staff-app .topbar{background:transparent;box-shadow:none;border:0;padding:6px 0 20px;border-radius:0}.staff-app .topbar h1{letter-spacing:-.035em;font-size:clamp(24px,2.4vw,34px);margin:0 0 5px}.staff-app .topbar small{font-size:13px;color:var(--muted)}
+.staff-app .page-guide{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;background:#fff;border:1px solid var(--border);border-left:4px solid #285ca1;border-radius:12px;margin:0 0 22px}
+.staff-app .page-guide p{margin:0;max-width:78ch;color:var(--muted);font-size:14px}.staff-app .page-guide strong{display:block;color:var(--text);font-size:16px;margin-bottom:5px}.staff-app .page-guide .btn{white-space:nowrap;flex-shrink:0}
+.staff-app .panel{border:1px solid var(--border);box-shadow:0 2px 7px #142b4505;border-radius:12px;padding:22px;margin-bottom:22px}.staff-app .panel h2{font-size:19px;letter-spacing:-.015em;margin-top:0}.staff-app .panel>p{color:var(--muted);font-size:14px}
+.staff-app .card{border:1px solid var(--border);border-radius:12px;box-shadow:none}.staff-app .card strong{font-variant-numeric:tabular-nums}
+.staff-app label{font-size:14px;font-weight:600;color:var(--text)}.staff-app input:not([type=checkbox]):not([type=radio]),.staff-app select,.staff-app textarea{font:inherit;font-size:14px;border:1px solid #c5d0de;border-radius:7px;background:#fff;color:#192b43;padding:10px 12px;min-height:43px;max-width:100%;box-shadow:none}.staff-app textarea{resize:vertical}.staff-app input:focus,.staff-app select:focus,.staff-app textarea:focus{border-color:#285ca1;outline:3px solid #285ca11a}.staff-app input[type=checkbox]{width:18px;height:18px;accent-color:#24548e;vertical-align:middle}
+.staff-app button:not(.nav-logout):not(#clinic-chat-toggle),.staff-app .btn{border-radius:7px;min-height:40px;font-size:14px;font-weight:600;padding:10px 15px;box-shadow:none}.staff-app .btn.primary,.staff-app button[type=submit]:not(.secondary):not(.danger){background:#214f8a;color:white;border:1px solid #214f8a}.staff-app .btn.secondary{background:#fff;color:#214f8a;border:1px solid #bdcce0}.staff-app .btn.danger{background:#fff2f1;color:#a12622;border:1px solid #edbfbb}.staff-app .btn:hover{filter:brightness(.97)}
+.staff-app .table-scroll{overflow-x:auto;max-width:100%;border:1px solid var(--border);border-radius:9px;margin-top:14px}.staff-app .table-scroll table{margin:0;width:100%;border-collapse:collapse}.staff-app th{background:#f3f6fa;color:#4b5e75;font-size:12px;font-weight:700;text-transform:none;letter-spacing:.02em;white-space:nowrap}.staff-app td{font-size:14px;vertical-align:top}.staff-app th,.staff-app td{padding:13px 14px;border-bottom:1px solid #e7ecf2}.staff-app tbody tr:last-child td{border-bottom:0}.staff-app tbody tr:hover{background:#f8faff}
+.staff-app .badge{border-radius:5px;font-size:12px;font-weight:600;padding:4px 8px}.staff-app .badge.red{background:#fff0ef;color:#a12622}.staff-app .badge.green,.staff-app .badge.success{background:#eaf7ef;color:#22613b}.staff-app .badge.warning{background:#fff4d8;color:#795400}.staff-app .alert.danger{background:#fff0ef;color:#98231f;border:1px solid #efc1bd}.staff-app .alert.success{background:#eaf7ef;color:#22613b;border:1px solid #b8ddc6}
+.staff-app details.form-disclosure{border:1px solid var(--border);border-radius:9px}.staff-app details.form-disclosure>summary{padding:15px;font-weight:700;color:#214f8a;cursor:pointer}.staff-app details.form-disclosure[open]>summary{border-bottom:1px solid var(--border);margin-bottom:16px}.staff-app .movement-help{background:#edf3fb;border-radius:8px;padding:12px 14px;font-size:14px;color:#27486f;grid-column:1/-1}.staff-app .form-grid{gap:18px}.staff-app .assessment-filters{display:flex;gap:14px;align-items:end;flex-wrap:wrap}.staff-app .app-footer{color:var(--muted);font-size:12px}
+@media(max-width:900px){.staff-app .sidebar nav>a{padding:10px 12px}.staff-app .page-guide{align-items:flex-start}.staff-app .nav-icon{display:none}}
+@media(max-width:620px){.staff-app .page-guide{flex-direction:column;padding:16px;gap:12px}.staff-app .page-guide .btn{width:100%;text-align:center}.staff-app .panel{padding:16px}.staff-app .form-grid{grid-template-columns:1fr}.staff-app .table-scroll{border-radius:6px}.staff-app .topbar h1{font-size:25px}}
+@media print{.staff-app .page-guide,.staff-app .sidebar,.staff-app .topbar,.staff-app .app-footer{display:none!important}.staff-app .content{margin:0;padding:0;width:100%;max-width:none}.staff-app .table-scroll{overflow:visible;border:0}.staff-app .panel{box-shadow:none}}
+
+.staff-app .list-pagination{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 4px}.staff-app .list-pagination span{color:var(--muted);font-size:14px}
+
+/* One-field medicine picker */
+.staff-app .medicine-picker{position:relative;min-width:0}.staff-app .medicine-picker label,.staff-app .medicine-picker input{width:100%}.staff-app .medicine-matches{position:absolute;top:70px;left:0;right:0;max-height:300px;overflow-y:auto;background:#fff;border:1px solid #b8c9df;border-radius:8px;box-shadow:0 8px 20px #132d5320;z-index:30}.staff-app .medicine-match{padding:12px 14px;font-size:14px;line-height:1.5;border-bottom:1px solid #edf0f5;cursor:pointer;overflow-wrap:anywhere}.staff-app .medicine-match:hover,.staff-app .medicine-match.is-active{background:#eaf1fb;color:#123d72}.staff-app #movement-search-status{font-size:12px;font-weight:400;color:var(--muted);margin:6px 0 0}.staff-app .medicine-picker [hidden]{display:none!important}
+
+/* Author label styles must not reveal fields hidden by the selected movement. */
+.staff-app #record-movement [hidden]{display:none!important}
+
+/* Stable rows for the stock-movement form; do not use the general auto-fit grid. */
+.staff-app #record-movement>form{grid-template-columns:minmax(240px,1fr) minmax(0,2fr);align-items:start;gap:20px 24px;padding:4px 20px 20px}
+.staff-app #record-movement #movement-type-label{grid-column:1;grid-row:1}
+.staff-app #record-movement .medicine-picker{grid-column:2;grid-row:1}
+.staff-app #record-movement .movement-help{grid-column:1/-1;margin:0;line-height:1.5}
+.staff-app #record-movement #quantity-label,.staff-app #record-movement #count-label{grid-column:1}
+.staff-app #record-movement #count-preview{grid-column:2;align-self:end;margin:0;padding:12px 14px;background:#f3f6fa;border:1px solid var(--border);border-radius:7px;font-size:14px;line-height:1.5}
+.staff-app #record-movement #reference-label{grid-column:2}
+.staff-app #record-movement #reason-label{grid-column:1/-1}
+.staff-app #record-movement #movement-notes{min-height:100px;display:block;width:100%}
+.staff-app #record-movement .movement-actions{grid-column:1/-1;border-top:1px solid var(--border);padding-top:18px;margin-top:0}
+.staff-app #record-movement .medicine-matches{top:70px}.staff-app #record-movement #movement-search-status{line-height:1.5;overflow-wrap:anywhere}
+@media(max-width:700px){.staff-app #record-movement>form{grid-template-columns:minmax(0,1fr);padding:0 12px 16px;gap:16px}.staff-app #record-movement #movement-type-label,.staff-app #record-movement .medicine-picker,.staff-app #record-movement #quantity-label,.staff-app #record-movement #count-label,.staff-app #record-movement #count-preview,.staff-app #record-movement #reference-label{grid-column:1;grid-row:auto}.staff-app #record-movement .movement-actions button{width:100%}}
+
+.staff-app .medicine-list-controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px}.staff-app .medicine-list-controls label{min-width:155px}.staff-app .medicine-list-controls .search-input{width:250px;max-width:100%}@media(max-width:620px){.staff-app .medicine-list-controls,.staff-app .medicine-list-controls label,.staff-app .medicine-list-controls .search-input{width:100%}}
+
+.staff-app .custom-period-field[hidden]{display:none!important}
+
+.staff-app .medicine-match.is-unavailable{color:#718096;background:#f5f6f8;cursor:not-allowed}.staff-app .medicine-match.is-unavailable:hover{background:#f5f6f8;color:#718096}.staff-app .medicine-availability{display:inline-block;margin:4px 0 0 8px;padding:2px 7px;border-radius:5px;font-size:12px;font-weight:700}.staff-app .medicine-availability.is-empty{background:#e8ecf1;color:#566273}.staff-app .medicine-availability.is-expired{background:#fff0ef;color:#a12622}
+
+.staff-app .medicine-batches>summary{cursor:pointer;font-weight:600;color:#214f8a;padding:8px 0}.staff-app #med-table>tbody>tr:has(.medicine-batches)>td{background:#f8faff;padding-top:4px;padding-bottom:8px}.staff-app .medicine-batches table{margin-top:12px}.staff-app #new-batch{scroll-margin-top:16px}
+
+.staff-app #record-movement #receive-expiry-label{grid-column:2}@media(max-width:700px){.staff-app #record-movement #receive-expiry-label{grid-column:1}}
+
+.staff-app .expiry-breakdown{min-width:210px}.staff-app .expiry-breakdown>div,.staff-app .expiry-breakdown details div{margin-bottom:6px}.staff-app .expiry-breakdown summary,.staff-app .action-stack>details>summary{cursor:pointer;color:#214f8a;font-size:13px;font-weight:600}.staff-app .action-stack>details .btn{display:block;margin-top:6px}
+
+.staff-app .admin-maintenance{margin:0 0 20px;padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--muted)}.staff-app .admin-maintenance>summary{cursor:pointer;font-weight:600}.staff-app .admin-maintenance p{max-width:75ch}

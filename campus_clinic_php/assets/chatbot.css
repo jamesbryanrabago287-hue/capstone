@@ -1,0 +1,35 @@
+#clinic-chat-toggle { position:fixed; right:24px; bottom:24px; z-index:1000; background:var(--blue-800); color:white; border:2px solid var(--gold); border-radius:28px; padding:13px 20px; box-shadow:var(--shadow); cursor:pointer; }
+#clinic-chat { position:fixed; right:24px; bottom:88px; z-index:1001; width:min(440px, calc(100vw - 24px)); height:min(680px, calc(100dvh - 112px)); background:white; border:1px solid var(--border); border-radius:18px; box-shadow:0 12px 40px #0a235233; display:flex; flex-direction:column; overflow:hidden; }
+#clinic-chat[hidden] { display:none; }
+.clinic-chat-heading { display:flex; justify-content:space-between; align-items:center; padding:15px; background:var(--blue-900); color:white; }
+.clinic-chat-heading small { display:block; color:#fff6d6; font-size:12px; }
+#clinic-chat-close { background:transparent; border:0; color:white; font-size:26px; padding:0 8px; cursor:pointer; }
+#clinic-chat-messages { flex:1; min-height:110px; overflow-y:auto; padding:14px; }
+#clinic-chat-messages p { padding:10px 12px; margin:0 0 10px; border-radius:12px; font-size:14px; white-space:pre-wrap; overflow-wrap:anywhere; }
+.clinic-chat-bot { background:var(--blue-soft); margin-right:12px !important; }
+.clinic-chat-user { background:var(--gold-soft); margin-left:25px !important; }
+#clinic-chat-controls { display:flex; flex-wrap:wrap; gap:7px; padding:10px 14px; max-height:48%; overflow-y:auto; border-top:1px solid var(--border); }
+#clinic-chat-controls button, #clinic-chat-restart { background:white; color:var(--blue-800); border:1px solid var(--border); border-radius:10px; padding:9px 12px; font:inherit; font-size:13px; cursor:pointer; margin:0; }
+#clinic-chat-controls form { display:grid; gap:9px; width:100%; margin:0; }
+#clinic-chat-controls form button { background:var(--blue-700); color:white; }
+#clinic-chat-controls label { display:block; font-size:13px; }
+#clinic-chat-controls input:not([type=checkbox]), #clinic-chat-controls textarea { display:block; width:100%; padding:8px; border:1px solid var(--border); border-radius:7px; margin:4px 0 0; font:inherit; }
+#clinic-chat-controls .clinic-chat-consent { display:flex; align-items:flex-start; gap:8px; }
+#clinic-chat-controls input[type=checkbox] { width:auto; flex:none; margin-top:4px; }
+.clinic-chat-bottom { padding:8px 14px; display:flex; justify-content:space-between; align-items:center; gap:8px; border-top:1px solid var(--border); }
+.clinic-chat-bottom small { font-size:11px; color:var(--muted); }
+#clinic-chat button:disabled { opacity:.6; cursor:wait; }
+#clinic-chat button:focus-visible, #clinic-chat-toggle:focus-visible, #clinic-chat input:focus-visible, #clinic-chat textarea:focus-visible { outline:3px solid var(--gold); outline-offset:2px; }
+.assessment-public { max-width:850px; margin:50px auto; padding:24px; }
+.assessment-public h1 { color:var(--blue-900); }
+.assessment-record { white-space:pre-wrap; overflow-wrap:anywhere; }
+.assessment-review-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+@media(max-width:480px) { #clinic-chat { right:12px; bottom:80px; } #clinic-chat-toggle { right:12px; bottom:16px; } }
+@media print { #clinic-chat, #clinic-chat-toggle { display:none !important; } }
+
+
+.clinic-chat-notice { flex:none; margin:0; padding:8px 14px; background:#fff6d6; color:var(--blue-900); font-size:12px; border-bottom:1px solid var(--border); }
+
+.assessment-filters { display:flex; flex-wrap:wrap; align-items:end; gap:12px; }
+.verification-check { display:flex; align-items:flex-start; gap:8px; margin:14px 0; }
+.verification-check input[type=checkbox] { width:auto; flex:none; margin-top:4px; }

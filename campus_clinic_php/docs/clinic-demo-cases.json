@@ -1,0 +1,605 @@
+{
+    "prepared": "2026-11-07",
+    "rule_version": "draft-2",
+    "status": "Provisional demonstration only; pending clinical review",
+    "clinical_approval": null,
+    "questions": [
+        {
+            "key": "symptom",
+            "text": "What is bothering you? Choose the concern that best fits how you feel.",
+            "options": {
+                "fever": "Fever / feeling feverish",
+                "respiratory": "Cough / sore throat / runny nose",
+                "headache": "Headache",
+                "stomach": "Stomach discomfort / nausea / diarrhea",
+                "skin": "Itching / rash",
+                "foot": "Foot / feet / ankle pain",
+                "other": "Other / several symptoms that do not fit"
+            }
+        },
+        {
+            "key": "headache_flags",
+            "when": {
+                "symptom": "headache"
+            },
+            "text": "Headache check. Emergency signs: sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever. Other concerning signs: vomiting, new eye/vision problems, or pain brought on by coughing/exercise.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "respiratory_flags",
+            "when": {
+                "symptom": "respiratory"
+            },
+            "text": "Breathing/throat check. Emergency signs: gasping, inability to speak because of breathing difficulty, blue/grey lips, throat swelling, or inability to swallow. Other concerning signs: shortness of breath, chest pain, coughing blood, or trouble swallowing fluids.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "stomach_flags",
+            "when": {
+                "symptom": "stomach"
+            },
+            "text": "Stomach check. Emergency signs: blood/coffee-ground material or green vomit, sudden severe belly pain, or possible poisoning. Other concerning signs: blood in stool, persistent/localized belly pain, repeated vomiting, or inability to keep fluids down.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "fever_flags",
+            "when": {
+                "symptom": "fever"
+            },
+            "text": "Fever check. Emergency signs: stiff neck, pain from bright light, confusion, or a rash that does not fade under a glass. Other concerning signs: worsening fever despite home care, repeated vomiting, new bleeding, severe weakness, or difficulty drinking.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "skin_flags",
+            "when": {
+                "symptom": "skin"
+            },
+            "text": "Rash check. Emergency signs: swelling of lips/tongue/throat or difficulty breathing, a rash that does not fade under a glass, or painful blistering/peeling skin with mouth/eye involvement. Other concerning signs: fever, rapid spreading, or painful skin.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "foot_flags",
+            "when": {
+                "symptom": "foot"
+            },
+            "text": "I am sorry your feet hurt. First, are there any warning signs? Emergency signs: a badly injured foot with exposed bone, uncontrolled bleeding, an odd shape after injury, or new numbness or cold/blue skin after injury. Other concerning signs: you cannot walk, severe pain, or a hot swollen foot or fever.",
+            "options": {
+                "emergency": "One or more emergency signs listed above",
+                "urgent": "One or more other concerning signs listed above",
+                "none": "None of the listed signs",
+                "unsure": "Not sure"
+            },
+            "stop": {
+                "emergency": "emergency",
+                "urgent": "urgent",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "foot_side",
+            "when": {
+                "symptom": "foot"
+            },
+            "text": "Is the pain in one foot or both feet?",
+            "options": {
+                "one": "One foot / ankle",
+                "both": "Both feet / ankles",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "foot_injury",
+            "when": {
+                "symptom": "foot"
+            },
+            "text": "Did it start after an injury, or after walking/standing for a long time?",
+            "options": {
+                "injury": "After an injury / twist / fall",
+                "activity": "After walking or standing",
+                "neither": "Neither / no clear trigger",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "warning",
+            "text": "Before we continue, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?",
+            "options": {
+                "yes": "Yes / I may be having an emergency",
+                "unsure": "I am unsure",
+                "no": "None of these"
+            },
+            "stop": {
+                "yes": "emergency",
+                "unsure": "urgent"
+            }
+        },
+        {
+            "key": "duration",
+            "text": "How long has this been going on?",
+            "options": {
+                "today": "Less than 24 hours",
+                "days": "1 to 3 days",
+                "longer": "More than 3 days",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "severity",
+            "text": "How are the symptoms affecting you?",
+            "options": {
+                "mild": "Mild; I can do usual activities",
+                "moderate": "Interfering with usual activities",
+                "severe": "Severe / rapidly worsening",
+                "unknown": "Not sure"
+            },
+            "stop": {
+                "severe": "urgent"
+            }
+        },
+        {
+            "key": "headache_pattern",
+            "when": {
+                "symptom": "headache"
+            },
+            "text": "Is this headache like an occasional mild headache you have had before, without any new or unusual features?",
+            "options": {
+                "familiar": "Yes, familiar and occasional",
+                "new": "New or different",
+                "recurrent": "Happening repeatedly",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "respiratory_pattern",
+            "when": {
+                "symptom": "respiratory"
+            },
+            "text": "Are your symptoms limited to a mild runny/blocked nose, sneezing, mild sore throat or mild cough, without fever, wheezing, or other symptoms?",
+            "options": {
+                "simple": "Yes, only these mild symptoms",
+                "other": "No, I have other symptoms too",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "stomach_pattern",
+            "when": {
+                "symptom": "stomach"
+            },
+            "text": "Which best describes your stomach symptoms?",
+            "options": {
+                "loose": "Only mild loose stools, without vomiting, fever, or ongoing belly pain",
+                "vomiting": "Nausea or vomiting",
+                "pain": "Belly pain or other symptoms",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "trend",
+            "text": "Compared with earlier, are the symptoms improving?",
+            "options": {
+                "improving": "Yes, improving",
+                "same": "About the same",
+                "worse": "Getting worse / returned after improving",
+                "unknown": "Not sure"
+            }
+        },
+        {
+            "key": "hydration",
+            "text": "Can you drink and keep fluids down, and are you urinating about as usual without new dizziness?",
+            "options": {
+                "normal": "Yes, drinking and urinating normally",
+                "problem": "No; unable to keep fluids down, much less urine, or new dizziness",
+                "unknown": "Not sure"
+            },
+            "stop": {
+                "problem": "urgent"
+            }
+        },
+        {
+            "key": "age",
+            "text": "Which age group are you in? The self-care pathway is for adults aged 18 and over only.",
+            "options": {
+                "adult": "18 or older",
+                "minor": "Under 18",
+                "unknown": "Prefer not to say / not sure"
+            }
+        },
+        {
+            "key": "risk",
+            "text": "Are you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.",
+            "options": {
+                "yes": "Yes",
+                "no": "No",
+                "unknown": "Not sure / prefer not to say"
+            }
+        }
+    ],
+    "cases": [
+        {
+            "id": "D01",
+            "title": "Mild familiar headache",
+            "scenario": "Fictional adult selects a familiar occasional mild headache, under 24 hours, improving, normal hydration and no listed risks or warning signs.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "none",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "self_care",
+                "assessment": "Self-care and monitoring may be reasonable",
+                "advice": "You reported a short-lived, mild, improving symptom pattern, no listed warning signs or health risks, and normal fluid intake.\n\nBased on the limited answers provided, home care and monitoring may be reasonable for now. This is not medical clearance, a diagnosis, or proof that a clinic visit is unnecessary. You can still contact the clinic at any time.\n\nReported symptom pattern: Familiar mild headache. This does not identify the cause.\n\nDrink water, eat regular meals, relax, and take breaks from screens.\n\nRecheck how you feel later today and tomorrow. Contact the clinic if symptoms are not improving, persist, return, or worry you. Seek prompt medical help for worsening symptoms, fever, trouble drinking, less urine, or new dizziness. Seek emergency help for breathing difficulty, collapse, confusion, sudden severe pain, or other emergency signs.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Headache\nHeadache check. Emergency signs: sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever. Other concerning signs: vomiting, new eye/vision problems, or pain brought on by coughing/exercise.\nAnswer: None of the listed signs\nIs this headache like an occasional mild headache you have had before, without any new or unusual features?\nAnswer: Yes, familiar and occasional\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Follow the monitoring guidance below. You may still contact the clinic if worried, or send this summary for staff review."
+            },
+            "discussion": "Ask whether the self-care eligibility and monitoring advice are appropriate.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D02",
+            "title": "Headache affecting activities",
+            "scenario": "Same fictional baseline, but symptoms interfere with usual activities.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "moderate",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "none",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "Symptoms interfere with activities or their severity is uncertain.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nReported symptom pattern: Familiar mild headache. This does not identify the cause.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Headache\nHeadache check. Emergency signs: sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever. Other concerning signs: vomiting, new eye/vision problems, or pain brought on by coughing/exercise.\nAnswer: None of the listed signs\nIs this headache like an occasional mild headache you have had before, without any new or unusual features?\nAnswer: Yes, familiar and occasional\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Interfering with usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Ask how the clinic defines functional severity and the visit time frame.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D03",
+            "title": "Headache warning response",
+            "scenario": "Fictional student selects the other concerning signs choice in the headache warning question.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "urgent",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "urgent",
+                "assessment": "Prompt medical assessment needed",
+                "advice": "A concerning or uncertain answer needs prompt human assessment; you do not need to finish this chat first.\n\nContact clinic staff or a healthcare professional now for prompt assessment. If they are unavailable, use an urgent medical service. If an emergency sign is present or develops, seek emergency help immediately; do not wait for a saved submission.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nConversation interrupted before completing all questions.\nHeadache check. Emergency signs: sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever. Other concerning signs: vomiting, new eye/vision problems, or pain brought on by coughing/exercise.\nAnswer: One or more other concerning signs listed above\nMain concern: Headache",
+                "rule_version": "draft-2",
+                "next_action": "Seek prompt in-person medical attention. Do not wait to submit this form or for staff to read it."
+            },
+            "discussion": "Ask whether the grouped warning question should be split and what escalation route to show.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D04",
+            "title": "Immediate warning response",
+            "scenario": "Fictional student selects Yes to the general emergency-warning question.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "yes",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "none",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "emergency",
+                "assessment": "Seek emergency help now",
+                "advice": "A reported warning sign needs immediate help. Do not complete or submit the questionnaire before seeking care.\n\nSeek emergency medical help now. Ask someone nearby to help contact local emergency services or the nearest emergency department. Do not wait for this chat or a clinic reply. This system does not dispatch help.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nConversation interrupted before completing all questions.\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: Yes / I may be having an emergency\nMain concern: Headache",
+                "rule_version": "draft-2",
+                "next_action": "Seek emergency medical help now. Completing or sending this form is not required and does not dispatch help."
+            },
+            "discussion": "Demonstrate immediate guidance without requiring submission; ask for approved local contacts.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D05",
+            "title": "Mild respiratory symptoms with a health risk",
+            "scenario": "Fictional adult selects mild respiratory symptoms and Yes to the health-risk question.",
+            "answers": {
+                "symptom": "respiratory",
+                "warning": "no",
+                "age": "adult",
+                "risk": "yes",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "respiratory_flags": "none",
+                "respiratory_pattern": "simple"
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "A relevant health risk was reported or could not be ruled out.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nReported symptom pattern: Mild nose/throat/cough symptoms. This does not identify the cause.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: Yes\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Cough / sore throat / runny nose\nBreathing/throat check. Emergency signs: gasping, inability to speak because of breathing difficulty, blue/grey lips, throat swelling, or inability to swallow. Other concerning signs: shortness of breath, chest pain, coughing blood, or trouble swallowing fluids.\nAnswer: None of the listed signs\nAre your symptoms limited to a mild runny/blocked nose, sneezing, mild sore throat or mild cough, without fever, wheezing, or other symptoms?\nAnswer: Yes, only these mild symptoms\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Ask whether different risks need separate pathways instead of a single broad risk group.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D06",
+            "title": "Feet hurt after walking",
+            "scenario": "Fictional adult reports both feet hurting after walking, one to three days, no selected foot warning signs.",
+            "answers": {
+                "symptom": "foot",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "days",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "foot_flags": "none",
+                "foot_side": "both",
+                "foot_injury": "activity"
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "Symptoms have lasted at least a day, or their duration is uncertain. This symptom pattern is outside the limited self-care pathways.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Foot / feet / ankle pain\nI am sorry your feet hurt. First, are there any warning signs? Emergency signs: a badly injured foot with exposed bone, uncontrolled bleeding, an odd shape after injury, or new numbness or cold/blue skin after injury. Other concerning signs: you cannot walk, severe pain, or a hot swollen foot or fever.\nAnswer: None of the listed signs\nIs the pain in one foot or both feet?\nAnswer: Both feet / ankles\nDid it start after an injury, or after walking/standing for a long time?\nAnswer: After walking or standing\nHow long has this been going on?\nAnswer: 1 to 3 days\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Explain that foot pain is outside the draft self-care paths; ask whether the blanket referral is too restrictive.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D07",
+            "title": "Symptom not in the choices",
+            "scenario": "Fictional student chooses Other and types a synthetic ear-discomfort description.",
+            "answers": {
+                "symptom": "other",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "details": "DEMO ONLY: ear discomfort; fictional example, not a real patient."
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "This symptom pattern is outside the limited self-care pathways. Additional notes need human review because the rules do not interpret free text.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Other / several symptoms that do not fit\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally\nStudent notes (not automatically interpreted): DEMO ONLY: ear discomfort; fictional example, not a real patient.",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Demonstrate preserved free text and human review without a made-up diagnosis.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D08",
+            "title": "Duration boundary",
+            "scenario": "Same reassuring fictional headache answers as D01, except duration is one to three days.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "days",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "none",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "Symptoms have lasted at least a day, or their duration is uncertain.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nReported symptom pattern: Familiar mild headache. This does not identify the cause.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Headache\nHeadache check. Emergency signs: sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever. Other concerning signs: vomiting, new eye/vision problems, or pain brought on by coughing/exercise.\nAnswer: None of the listed signs\nIs this headache like an occasional mild headache you have had before, without any new or unusual features?\nAnswer: Yes, familiar and occasional\nHow long has this been going on?\nAnswer: 1 to 3 days\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Flag the under-24-hour rule as an unapproved prototype restriction; ask the reviewer for an appropriate criterion.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D09",
+            "title": "Fever with uncertain health risk",
+            "scenario": "Fictional student selects fever, no selected fever warning signs, and Not sure for health risks.",
+            "answers": {
+                "symptom": "fever",
+                "warning": "no",
+                "age": "adult",
+                "risk": "unknown",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "fever_flags": "none"
+            },
+            "software_output": {
+                "priority": "urgent",
+                "assessment": "Prompt medical assessment needed",
+                "advice": "Fever together with a health risk or uncertain risk needs prompt professional assessment.\n\nContact clinic staff or a healthcare professional now for prompt assessment. If they are unavailable, use an urgent medical service. If an emergency sign is present or develops, seek emergency help immediately; do not wait for a saved submission.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: 18 or older\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: Not sure / prefer not to say\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Fever / feeling feverish\nFever check. Emergency signs: stiff neck, pain from bright light, confusion, or a rash that does not fade under a glass. Other concerning signs: worsening fever despite home care, repeated vomiting, new bleeding, severe weakness, or difficulty drinking.\nAnswer: None of the listed signs\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Seek prompt in-person medical attention. Do not wait to submit this form or for staff to read it."
+            },
+            "discussion": "Ask whether this uncertainty response causes excessive escalation and how it should be handled.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D10",
+            "title": "Hydration concern",
+            "scenario": "Fictional student selects mild loose stools, but reports difficulty with fluid intake or urination in the hydration question.",
+            "answers": {
+                "symptom": "stomach",
+                "warning": "no",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "problem",
+                "stomach_flags": "none",
+                "stomach_pattern": "loose"
+            },
+            "software_output": {
+                "priority": "urgent",
+                "assessment": "Prompt medical assessment needed",
+                "advice": "A concerning or uncertain answer needs prompt human assessment; you do not need to finish this chat first.\n\nContact clinic staff or a healthcare professional now for prompt assessment. If they are unavailable, use an urgent medical service. If an emergency sign is present or develops, seek emergency help immediately; do not wait for a saved submission.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nConversation interrupted before completing all questions.\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: No; unable to keep fluids down, much less urine, or new dizziness\nMain concern: Stomach discomfort / nausea / diarrhea",
+                "rule_version": "draft-2",
+                "next_action": "Seek prompt in-person medical attention. Do not wait to submit this form or for staff to read it."
+            },
+            "discussion": "Ask whether the compound hydration question should be split and how urgency should be determined.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D11",
+            "title": "Student under 18",
+            "scenario": "Fictional student selects otherwise mild respiratory answers, but age is under 18.",
+            "answers": {
+                "symptom": "respiratory",
+                "warning": "no",
+                "age": "minor",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "respiratory_flags": "none",
+                "respiratory_pattern": "simple"
+            },
+            "software_output": {
+                "priority": "clinic",
+                "assessment": "Clinic consultation recommended",
+                "advice": "The self-care pathway is limited to adults; students under 18 should involve a parent/guardian or clinic professional.\n\nArrange a clinic consultation to clarify your symptoms. Contact staff sooner if you feel worse or are concerned. If symptoms are severe or rapidly worsening, seek prompt medical assessment; use emergency services for emergency warning signs.\n\nReported symptom pattern: Mild nose/throat/cough symptoms. This does not identify the cause.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: None of these\nWhich age group are you in? The self-care pathway is for adults aged 18 and over only.\nAnswer: Under 18\nAre you pregnant/recently gave birth, taking blood thinners, immunocompromised, or managing a significant condition such as asthma, diabetes, or heart/kidney disease? Also choose Yes if a clinician has given you a special care plan.\nAnswer: No\nWhich symptom group is your main concern? These choices describe symptoms, not diagnoses.\nAnswer: Cough / sore throat / runny nose\nBreathing/throat check. Emergency signs: gasping, inability to speak because of breathing difficulty, blue/grey lips, throat swelling, or inability to swallow. Other concerning signs: shortness of breath, chest pain, coughing blood, or trouble swallowing fluids.\nAnswer: None of the listed signs\nAre your symptoms limited to a mild runny/blocked nose, sneezing, mild sore throat or mild cough, without fever, wheezing, or other symptoms?\nAnswer: Yes, only these mild symptoms\nHow long has this been going on?\nAnswer: Less than 24 hours\nHow are the symptoms affecting you?\nAnswer: Mild; I can do usual activities\nCompared with earlier, are the symptoms improving?\nAnswer: Yes, improving\nCan you drink and keep fluids down, and are you urinating about as usual without new dizziness?\nAnswer: Yes, drinking and urinating normally",
+                "rule_version": "draft-2",
+                "next_action": "Visit the campus clinic for an assessment. If you send this summary, keep its reference and show it with your student ID when you visit."
+            },
+            "discussion": "Explain the adult-only design boundary; ask for an approved route for younger students.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        },
+        {
+            "id": "D12",
+            "title": "Not sure about warning signs",
+            "scenario": "Fictional student selects I am unsure on the general warning question.",
+            "answers": {
+                "symptom": "headache",
+                "warning": "unsure",
+                "age": "adult",
+                "risk": "no",
+                "duration": "today",
+                "severity": "mild",
+                "trend": "improving",
+                "hydration": "normal",
+                "headache_flags": "none",
+                "headache_pattern": "familiar"
+            },
+            "software_output": {
+                "priority": "urgent",
+                "assessment": "Prompt medical assessment needed",
+                "advice": "A concerning or uncertain answer needs prompt human assessment; you do not need to finish this chat first.\n\nContact clinic staff or a healthcare professional now for prompt assessment. If they are unavailable, use an urgent medical service. If an emergency sign is present or develops, seek emergency help immediately; do not wait for a saved submission.\n\nPrototype guidance; clinic review is still required. Free-text notes are not assessed by these rules.",
+                "summary": "Rule version: draft-2\nConversation interrupted before completing all questions.\nFirst, are you having severe trouble breathing, a tight/heavy chest, sudden weakness or trouble speaking, confusion, collapse, a seizure, sudden severe pain, uncontrolled bleeding, swelling of the lips/tongue/throat, or another emergency?\nAnswer: I am unsure\nMain concern: Headache",
+                "rule_version": "draft-2",
+                "next_action": "Seek prompt in-person medical attention. Do not wait to submit this form or for staff to read it."
+            },
+            "discussion": "Ask how the clinic wants uncertainty handled; do not treat an unanswered or uncertain item as No.",
+            "clinician_expected_action": null,
+            "reviewer_feedback": null
+        }
+    ]
+}

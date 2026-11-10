@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Chatbot wording review</title><style>body{font:16px/1.5 system-ui;max-width:850px;padding:24px;margin:auto}section{border-top:1px solid #aaa;margin-top:24px;break-inside:avoid}p.question{white-space:pre-wrap}textarea{width:98%;min-height:70px}@media print{button{display:none}}</style><h1>Chatbot question review</h1><p>Draft-3 wording revision, 7 November 2026. Clinical approval is pending. All 35 questions are listed for review; students only see questions relevant to their selected concern. Answer values, branch conditions, and referral rules are unchanged.</p><button onclick="window.print()">Print / Save as PDF</button><p>Reviewer: __________________ Date: __________________</p><p>For each question: Is it understandable? Is an important sign missing? Are the answer choices and resulting actions appropriate? Review fictional cases independently; software checks do not establish clinical validity.</p><section><h2>symptom</h2><p>Shown for every concern</p><p class="question">What is bothering you? Choose the closest match.</p><ul><li>Fever / feeling feverish</li><li>Cough / sore throat / runny nose</li><li>Headache</li><li>Stomach discomfort / nausea / diarrhea</li><li>Itching / rash</li><li>Foot / feet / ankle pain</li><li>Dizziness / feeling faint</li><li>Tooth / gum pain</li><li>Ear pain / hearing concern</li><li>Eye pain / redness / vision concern</li><li>Back pain</li><li>Menstrual cramps / pelvic pain</li><li>Pain / burning / changes when urinating</li><li>Muscle / joint pain or injury</li><li>Other / several symptoms that do not fit</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>headache_flags</h2><p>Shown for: headache</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+sudden extremely painful headache; recent head injury; new weakness, speech or vision loss; seizure; stiff neck or light sensitivity with fever.
+
+Other concerning signs:
+vomiting, new eye/vision problems, or pain brought on by coughing/exercise.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>respiratory_flags</h2><p>Shown for: respiratory</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+gasping, inability to speak because of breathing difficulty, blue/grey lips, throat swelling, or inability to swallow.
+
+Other concerning signs:
+shortness of breath, chest pain, coughing blood, or trouble swallowing fluids.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>stomach_flags</h2><p>Shown for: stomach</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+blood/coffee-ground material or green vomit, sudden severe belly pain, or possible poisoning.
+
+Other concerning signs:
+blood in stool, persistent/localized belly pain, repeated vomiting, or inability to keep fluids down.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>fever_flags</h2><p>Shown for: fever</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+stiff neck, pain from bright light, confusion, or a rash that does not fade under a glass.
+
+Other concerning signs:
+worsening fever despite home care, repeated vomiting, new bleeding, severe weakness, or difficulty drinking.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>skin_flags</h2><p>Shown for: skin</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+swelling of lips/tongue/throat or difficulty breathing, a rash that does not fade under a glass, or painful blistering/peeling skin with mouth/eye involvement.
+
+Other concerning signs:
+fever, rapid spreading, or painful skin.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>dizziness_flags</h2><p>Shown for: dizziness</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+sudden weakness, trouble speaking, collapse, chest pain or severe breathing difficulty.
+
+Other concerning signs:
+new vision changes, repeated near-fainting, or dizziness with vomiting.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>dental_flags</h2><p>Shown for: dental</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+swelling around the eye or neck, or mouth/neck swelling affecting breathing, swallowing or speaking.
+
+Other concerning signs:
+cheek/jaw swelling, fever or difficulty opening your mouth.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>ear_flags</h2><p>Shown for: ear</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+collapse, confusion or new weakness/trouble speaking.
+
+Other concerning signs:
+hearing loss/change, fluid from the ear, swelling around the ear, fever/shivering, something stuck in the ear, or pain lasting more than 2 to 3 days.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>eye_flags</h2><p>Shown for: eye</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+sudden eye symptoms, inability to see, an injured/pierced eye or something stuck in it, eye pain keeping you awake, red eye with severe headache/nausea, or severe pain/vision loss after recent eye treatment.
+
+Other concerning signs:
+severe pain, light sensitivity, very red eye or other vision changes.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>back_flags</h2><p>Shown for: back</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+symptoms in both legs such as weakness/numbness, loss of feeling around genitals/anus, new bladder/bowel or sexual-function changes, chest pain, or pain after a serious accident.
+
+Other concerning signs:
+sudden severe or quickly worsening pain, fever/shivering or feeling generally unwell.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>period_flags</h2><p>Shown for: period</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+severe or worsening pelvic pain, fainting, shoulder-tip pain, heavy vaginal bleeding or breathing difficulty.
+
+Other concerning signs:
+possible pregnancy, fever/shivering, unusual bleeding/discharge, vomiting, or difficulty/pain when urinating or passing stool.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>urinary_flags</h2><p>Shown for: urinary</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+confusion, marked drowsiness or difficulty speaking.
+
+Other concerning signs:
+fever/shivering, blood in urine, lower tummy or back/side pain, pregnancy/possible pregnancy, inability to urinate, diabetes or weakened immunity.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>muscle_flags</h2><p>Shown for: muscle</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+a limb at an odd angle after injury, new numbness/tingling, cold or blue skin after injury, exposed bone or uncontrolled bleeding.
+
+Other concerning signs:
+inability to use or bear weight, substantial swelling, severe/worsening pain, fever/shivering or a hot swollen joint.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>foot_flags</h2><p>Shown for: foot</p><p class="question">Do any of these signs apply?
+
+Emergency signs:
+a badly injured foot with exposed bone, uncontrolled bleeding, an odd shape after injury, or new numbness or cold/blue skin after injury.
+
+Other concerning signs:
+you cannot walk, severe pain, or a hot swollen foot or fever.</p><ul><li>One or more emergency signs listed above ? current software action: emergency</li><li>One or more other concerning signs listed above ? current software action: urgent</li><li>None of the listed signs</li><li>Not sure ? current software action: urgent</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>foot_side</h2><p>Shown for: foot</p><p class="question">Is the pain in one foot or both feet?</p><ul><li>One foot / ankle</li><li>Both feet / ankles</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>foot_injury</h2><p>Shown for: foot</p><p class="question">Did this start after an injury or a long time walking or standing?</p><ul><li>After an injury / twist / fall</li><li>After walking or standing</li><li>Neither / no clear trigger</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>warning</h2><p>Shown for every concern</p><p class="question">Are you having any of these emergency signs?
+
+- Severe trouble breathing
+- A tight or heavy chest
+- Sudden weakness or trouble speaking
+- Confusion, collapse or a seizure
+- Sudden severe pain
+- Bleeding that will not stop
+- Swollen lips, tongue or throat
+- Another emergency</p><ul><li>Yes / I may be having an emergency ? current software action: emergency</li><li>I am unsure ? current software action: urgent</li><li>None of these</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>duration</h2><p>Shown for every concern</p><p class="question">When did this start?</p><ul><li>Less than 24 hours</li><li>1 to 3 days</li><li>More than 3 days</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>severity</h2><p>Shown for every concern</p><p class="question">How much is this affecting your usual activities?</p><ul><li>Mild; I can do usual activities</li><li>Interfering with usual activities</li><li>Severe / rapidly worsening ? current software action: urgent</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>headache_pattern</h2><p>Shown for: headache</p><p class="question">Is this a familiar, occasional mild headache, with nothing new or unusual?</p><ul><li>Yes, familiar and occasional</li><li>New or different</li><li>Happening repeatedly</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>respiratory_pattern</h2><p>Shown for: respiratory</p><p class="question">Do you only have a mild runny or blocked nose, sneezing, sore throat or cough? No fever, wheezing or other symptoms.</p><ul><li>Yes, only these mild symptoms</li><li>No, I have other symptoms too</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>stomach_pattern</h2><p>Shown for: stomach</p><p class="question">Which best describes your stomach symptoms?</p><ul><li>Only mild loose stools, without vomiting, fever, or ongoing belly pain</li><li>Nausea or vomiting</li><li>Belly pain or other symptoms</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>dizziness_pattern</h2><p>Shown for: dizziness</p><p class="question">Which best describes the dizziness?</p><ul><li>Spinning / off-balance</li><li>Lightheaded / feeling faint</li><li>Another feeling / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>dental_pattern</h2><p>Shown for: dental</p><p class="question">Where is the discomfort?</p><ul><li>Tooth</li><li>Gum / mouth</li><li>Several areas / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>ear_pattern</h2><p>Shown for: ear</p><p class="question">Which ear is affected?</p><ul><li>One ear</li><li>Both ears</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>eye_pattern</h2><p>Shown for: eye</p><p class="question">Which best describes the eye concern?</p><ul><li>Pain / soreness</li><li>Redness / watering / discharge</li><li>Vision concern</li><li>Other / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>back_pattern</h2><p>Shown for: back</p><p class="question">Where is the back discomfort?</p><ul><li>Lower back</li><li>Upper back</li><li>Several areas / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>period_pattern</h2><p>Shown for: period</p><p class="question">Which best describes the discomfort?</p><ul><li>Similar to usual menstrual cramps</li><li>New / different cramps</li><li>Pelvic / lower abdominal pain not clearly related to a period</li><li>Not sure / prefer not to say</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>urinary_pattern</h2><p>Shown for: urinary</p><p class="question">Which change have you noticed?</p><ul><li>Pain / burning</li><li>Going more often / sudden urge</li><li>Another change / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>muscle_pattern</h2><p>Shown for: muscle</p><p class="question">How did it start?</p><ul><li>Injury / twist / fall</li><li>After activity / exercise</li><li>No clear trigger</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>trend</h2><p>Shown for every concern</p><p class="question">Are you feeling better or worse?</p><ul><li>Yes, improving</li><li>About the same</li><li>Getting worse / returned after improving</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>hydration</h2><p>Shown for every concern</p><p class="question">Can you keep drinks down and pee as usual, without new dizziness?</p><ul><li>Yes, drinking and urinating normally</li><li>No; unable to keep fluids down, much less urine, or new dizziness ? current software action: urgent</li><li>Not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>age</h2><p>Shown for every concern</p><p class="question">How old are you? Self-care guidance here is only for people aged 18 or older.</p><ul><li>18 or older</li><li>Under 18</li><li>Prefer not to say / not sure</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><section><h2>risk</h2><p>Shown for every concern</p><p class="question">Do any of these apply to you?
+
+- Pregnant or recently gave birth
+- Taking blood-thinning medicine
+- A weakened immune system
+- A significant health condition, such as asthma, diabetes, or heart or kidney disease
+- A special care plan from a clinician</p><ul><li>Yes</li><li>No</li><li>Not sure / prefer not to say</li></ul><label>Clinician corrections / feedback:<textarea></textarea></label></section><p>Test these questions with students for comprehension after clinical review. No review or approval has been fabricated.</p></html>
